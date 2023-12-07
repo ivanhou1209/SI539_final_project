@@ -1,0 +1,93 @@
+/* Column Layout */
+
+.container {
+    margin-top: 30px;
+}
+
+.primary {
+    height: 825px;
+    display: flex;
+    flex-direction: column;
+}
+
+.secondary {
+    height: 825px;
+}
+
+
+/* Resume download button */
+
+#resume-download-container {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#resume-download {
+    width: 400px;
+    height: 50px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+    background-color: var(--navy);
+}
+
+#resume-download img {
+    height: 40px;
+}
+
+#resume-download-container>a:hover,
+#resume-download-container>a:link,
+#resume-download-container>a:visited,
+#resume-download-container>a:active {
+    text-decoration: none;
+}
+
+
+/* card sections */
+
+.card {
+    min-height: 460px;
+    background-color: var(--gray-semi-transparent);
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+}
+
+.card-title {
+    /* background-color: #333; */
+    /* background-image: linear-gradient(to right, #555, var(--gray-semi-transparent)); */
+    background-color: var(--navy);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 50px;
+    height: 75px;
+    width: 100%;
+}
+
+.card-title-reverse {
+    /* background-image: linear-gradient(to left, #555, rgb(230, 230, 230, 0.5)); */
+    background-color: var(--navy);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    padding-right: 50px;
+    height: 75px;
+    width: 100%;
+}
+
+.education-row {
+    margin: 30px 5%;
+    padding-left: 10px;
+    display: grid;
+    grid-template-columns: 30% 60%;
+}

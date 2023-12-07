@@ -1,0 +1,77 @@
+/* Apply styles to the project1 div */
+.project{
+    position: relative;
+    max-width: 100%;
+    max-height: 100%;
+    width: 1024px;
+    height: 576px;
+    margin: 50px auto;
+    overflow: hidden;
+    display: flex;
+    border-radius: 15px;
+    box-shadow: 0 0 10px 0 var(--shadow);
+}
+
+.projectimg{
+    display:flex;
+}
+
+.project:hover {
+    opacity: 0.9;
+    transform: scale(1.1);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    /* Add a smooth transition effect for opacity and transform */
+}
+
+.banner-text{
+    position: absolute;
+    top: 15px;
+    color: white;
+    padding: 35% 10%;
+}
+
+.banner-text a{
+    color: inherit;
+    text-decoration: none;
+}
+.banner-text a:visited{
+    color: inherit;
+}
+
+.banner-text:hover a, .banner-text:active{
+    color: inherit;
+    text-decoration: none;
+}
+
+.banner-text3{
+    position: absolute;
+    top: 15px;
+    color: black;
+    padding: 35% 10%;
+}
+
+.banner-text3 a{
+    color: inherit;
+    text-decoration: none;
+}
+.banner-text3 a:visited{
+    color: inherit;
+}
+
+.banner-text3:hover a, .banner-text3:active{
+    color: inherit;
+    text-decoration: none;
+}
+
+.project_image{
+    position: relative;
+    max-width: 100%;
+    max-height: 100%;
+    width: 1024px;
+    height: 576px;
+    margin: 50px auto;
+    overflow: hidden;
+    display: flex;
+    border-radius: 15px;
+    box-shadow: 0 0 10px 0 var(--shadow);
+}

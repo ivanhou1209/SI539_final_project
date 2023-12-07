@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yifan Hou</title>
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="description" content="Yifan Hou's Portfolio Website">
+    <meta name="viewport" cont ent="width=device-width, initial-scale=1">
+    <link rel="icon" href="assets/icon.png" />
+
+
+    <script src="https://www.kirupa.com/js/randomColor.js"></script>
+
+</head>
+
+<body>
+    <div class="navbar-container transparent">
+        <div class="navbar blackfont midfont plainfont centertext">
+            <div>
+                <a href="index.html"><img id="navbar-icon" src="assets/icon.png" alt="icon"></a>
+                <a href="portfolio.html">About Me</a>
+                <a href="projects.html">Projects</a>
+            </div>
+        </div>
+    </div>
+    <div class="header-container">
+        <canvas id="signature-canvas"></canvas>
+        <h1 id="message" class="largefont semiblackfont">
+            <span>I</span>
+            <span>n</span>
+            <span>d</span>
+            <span>u</span>
+            <span>s</span>
+            <span>t</span>
+            <span>r</span>
+            <span>i</span>
+            <span>a</span>
+            <span>l</span>
+            <span>&nbsp;</span>
+            <span>D</span>
+            <span>e</span>
+            <span>s</span>
+            <span>i</span>
+            <span>g</span>
+            <span>n</span>
+            <span>e</span>
+            <span>r</span>
+            <span>,</span>
+            <span>&nbsp;</span>
+            <span>U</span>
+            <span>X</span>
+            <span>&nbsp;</span>
+            <span>R</span>
+            <span>e</span>
+            <span>s</span>
+            <span>e</span>
+            <span>a</span>
+            <span>r</span>
+            <span>c</span>
+            <span>h</span>
+            <span>e</span>
+            <span>r</span>
+            <span>,</span>
+            <span>&nbsp;</span>
+            <span>U</span>
+            <span>I</span>
+            <span>&nbsp;</span>
+            <span>D</span>
+            <span>e</span>
+            <span>s</span>
+            <span>i</span>
+            <span>g</span>
+            <span>n</span>
+            <span>e</span>
+            <span>r</span>
+        </h1>
+        <style>
+            h1 span {
+                --colorA: red;
+                --colorB: blue;
+                animation-name: changeColor;
+                animation-duration: .2s;
+                animation-iteration-count: infinite;
+                animation-timing-function: ease-in;
+            }
+
+            @keyframes changeColor {
+                from {
+                    color: var(--colorA);
+                }
+
+                to {
+                    color: var(--colorB);
+                }
+            }
+        </style>
+        <script>
+            let headerDescriptor = document.querySelector("#message");
+
+            function animateCharacters(element) {
+                let spanElements = element.querySelectorAll("span");
+                for (let i = 0; i < spanElements.length; i++) {
+                    let spanElement = spanElements[i];
+                    let randomDuration = .2 + Math.random() * 1;
+
+                    spanElement.style.setProperty("--duration", randomDuration + "s");
+                }
+                setInitialRandomColor(spanElements);
+
+                headerDescriptor.addEventListener("animationiteration", changeColor, true);
+            }
+            animateCharacters(message);
+
+            function setInitialRandomColor(elements) {
+                for (let i = 0; i < elements.length; i++) {
+                    let spanElement = elements[i];
+                    spanElement.style.setProperty("--colorA", getRandomColor().value);
+                    spanElement.style.setProperty("--colorB", getRandomColor().value);
+                }
+            }
+            function changeColor(event) {
+                let spanElement = event.target;
+
+                let spanStyle = getComputedStyle(spanElement);
+                let finalColor = spanStyle.getPropertyValue("--colorB");
+
+                spanElement.style.setProperty("--colorA", finalColor);
+                spanElement.style.setProperty("--colorB", getRandomColor().value);
+            }
+        </script>
+    </div>
+    <a href="https://www.linkedin.com/in/yifan-hou-5024a31a9/" target="_blank">
+        <div class="contact-tab contact-tab1">
+            <div class="contact-tab-text bigfont whitefont centertext">
+                LinkedIn
+            </div>
+            <img src="assets/linkedin.png" alt="linkedin icon">
+        </div>
+    </a>
+    </a>
+    <a href="mailto:yifanhou@umich.edu" target="_blank">
+        <div class="contact-tab contact-tab3">
+            <div class="contact-tab-text bigfont whitefont centertext">
+                Email
+            </div>
+            <img src="assets/mail.png" alt="email icon">
+        </div>
+    </a>
+    <a href="https://www.instagram.com/ivanhou1209/" target="_blank">
+        <div class="contact-tab contact-tab4">
+            <div class="contact-tab-text bigfont whitefont centertext">
+                Instagram
+            </div>
+            <img src="assets/instagram.png" alt="instagram icon">
+        </div>
+    </a>
+    <div id="intro-locator">
+        <text class="titlefont largefont">Quick Intro</text>
+    </div>
+    <div>
+        <div class="intro-container">
+            <div><img src="assets/profile1.jpg" alt="profile picture 1"></div>
+            <div class="midfont blackfont">
+                <span>
+                    Hi there, my name is Yifan Hou, a Master of Science in Information student at University of
+                    Michigan, Ann Arbor. I am currently studying UX Design and research.
+                    <br>
+                    I have a background in Industrial Design and I am passionate about designing products that are both
+                    functional and aesthetically pleasing.
+                </span>
+            </div>
+        </div>
+        <div class="intro-container">
+            <div ><img src="assets/profile2.jpg" alt="profile picture 2"></div>
+            <div class="midfont blackfont">
+                <span>
+                    For recruiters interested in what I can bring for your company/team, please take a look under the <a
+                        href="projects.html">portfolio</a> section where I introduce the set of skills I offer.
+                    You should also browse throught my <a
+                        href="https://www.behance.net/gallery/159249523/Yifan-Hous-Portfolio">behance projects</a>,
+                    where I provide series of past projects I have worked on to showcase my skills.
+                </span>
+            </div>
+        </div>
+        <div class="intro-container">
+            <div><img src="assets/ultra.jpg" alt="profile picture 1"></div>
+            <div class="midfont blackfont">
+                <span>
+                    I am also a huge EDM fan, and I love going to Electric Music Festivals like Ultra Music Festivals, EDC, and Imagine Music Festival.
+                    <br>
+                    Here is my playlist of my favorite EDM songs:
+                </span>
+            </div>
+        </div>
+        <div class="spotify">
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/0nX7C1g1f6IJHeqG4gKPAY?utm_source=generator&theme=0" width="100%" height="750px" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+    </div>
+    <!-- Add this section after the existing content -->
+<div id="skills-section">
+    <div id="skills-locator">
+    <text class="titlefont largefont">Skills</text>
+</div>
+    <div class="skills-container">
+        <!-- Add your software icons and labels here -->
+        <div class="skill">
+            <img src="assets/figma.png" alt="Figma icon">
+            <span>Figma</span>
+        </div>
+        <div class="skill">
+            <img src="assets/photoshop.png" alt="Photoshop icon">
+            <span>Photoshop</span>
+        </div>
+        <div class="skill">
+            <img src="assets/illustrator.png" alt="Illustrator icon">
+            <span>Illustrator</span>
+        </div>
+        <div class="skill">
+            <img src="assets/fusion360.png" alt="fusion360 icon">
+            <span>Fusion 360</span>
+        </div>
+        <div class="skill">
+            <img src="assets/keyshot.png" alt="keyshot icon">
+            <span>Keyshot</span>
+        </div>
+        <div class="skill">
+            <img src="assets/css.png" alt="css icon">
+            <span>CSS</span>
+        </div>
+        <div class="skill">
+            <img src="assets/html.png" alt="html icon">
+            <span>HTML</span>
+        </div>
+        <!-- Add more skills as needed -->
+    </div>
+</div>
+
+
+
+    <!-- footer -->
+    <div class="footer-container centertext whitefont grayfont">
+        Copyright &#169; 2023 Yifan Hou
+    </div>
